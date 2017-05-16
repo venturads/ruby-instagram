@@ -5,7 +5,10 @@
 <div class="row">
 <%= image_tag(@post.image.url(:medium), :class => "col-sm-12") %>
 </div>
-<div class="row jumbotron"><%= @post.title %></div>
+<div class="panel panel-default" style="margin:20px;">
+    <div class="panel-heading"><%= @post.title %></div>
+    <div class="panel-body"><%= @post.description %></div>
+</div>
 <div>
 <%= link_to t('.back', :default => t("helpers.links.back")),
               posts_path, :class => 'btn btn-default'  %>
