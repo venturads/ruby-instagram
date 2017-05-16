@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
   <title>my ruby instagram</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-
-<%= yield %>
-
+<body class="container-fluid">
+  <div class="row col-sm-4" style="float: none; margin: 0 auto;>
+    <div class="col-sm-4">
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>
