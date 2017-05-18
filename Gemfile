@@ -7,6 +7,8 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'twitter-bootstrap-rails'
 gem "paperclip", "~> 4.3"
+gem 'will_paginate'
+gem 'kaminari'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
