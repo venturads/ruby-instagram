@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   validates :title, :presence => true, :length => { :minimum => 5}
   validates :description, :presence => true
-  belongs_to :user
+  belongs_to :user, foreign_key: "user_id"
   has_many :comments
   
 end

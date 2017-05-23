@@ -1,4 +1,4 @@
-<%= form_for @post, :html => { :class => "form-horizontal post" }, html: { multipart: true }  do |f| %>
+<%= form_for @post, :html => { class: "form-horizontal post" }, html: { multipart: true }  do |f| %>
 
   <% if @post.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
@@ -16,29 +16,29 @@
   <% end %>
 
   <div class="form-group" style="padding:10px;">
-    <%= f.label :title, :class => 'control-label col-lg-2' %>
+    <%= f.label :title, class: 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_field :title,:include_blank => "your text here", :class => 'form-control' %>
+      <%= f.text_field :title, include_blank: "your text here", class: 'form-control' %>
     </div>
     <%=f.error_span(:title) %>
   </div>
   <br>
   <div class="form-group" align="center">
-    <%= f.file_field :image, :class => 'btn btn-default' %>
+    <%= f.file_field :image, class: 'btn btn-default' %>
   </div>
   <div class="form-group">
-    <%= f.label :description, :class => 'control-label col-lg-2' %>
+    <%= f.label :description, class: 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.text_area :description, :class => 'form-control' %>
+      <%= f.text_area :description, class: 'form-control' %>
     </div>
     <%=f.error_span(:description) %>
   </div>
   
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10" style="margin:20px;">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= f.submit nil, class: 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                posts_path, :class => 'btn btn-default' %>
+                posts_path, class: 'btn btn-default' %>
     </div>
   </div>
 

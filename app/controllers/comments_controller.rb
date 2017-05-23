@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
     before_action :find_post
+    before_action :find_user
     
     def create
         @comment = @post.comments.create(params[:comment].permit(:content))
@@ -17,5 +18,8 @@ class CommentsController < ApplicationController
     
     def find_post
         @post = Post.find(params[:post_id])
+    end
+    def find_user
+        @user = User.find(params[:user_id])
     end
 end

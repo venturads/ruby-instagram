@@ -5,12 +5,14 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.paginate(:page => params[:page], :per_page => 20)
+  
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
     @comments = Comment.where(post_id: @post).order("created_at DESC")
+    #Post.joins(:users).where(id: { user: user_id })
   end
 
   # GET /posts/new
