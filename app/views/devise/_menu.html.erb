@@ -11,11 +11,15 @@
             <li><%= link_to "Edit Profile", edit_user_registration_path  %></li>
             <li><%= link_to "New Image", new_post_path  %></li>
             <li><%= link_to 'Members', users_path %></li>
+             <%if user_signed_in? %>
             <li><%= link_to "Sign out", 
                 destroy_user_session_path, 
                 method: :delete, 
                 data: {confirm: "Are you sure?"} %>
             </li>
+            <% else %>
+                <li><%= link_to "Sign In", new_user_session_path %></li>
+            <% end %>
           </ul>
         </div>
       </div>

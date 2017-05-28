@@ -17,17 +17,26 @@ pre {
   padding: 10px;
   font-size: 11px;
 }
-
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+footer a{
+  padding: 10px;
+}
+footer{
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
 a {
   color: #000;
-
+  text-decoration: none;
   &:visited {
     color: #666;
   }
 
   &:hover {
     color: #gff;
-    background-color: #000;
+    background-color: #ffg;
   }
 }
 
